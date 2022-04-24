@@ -1,3 +1,15 @@
+# Generic and Heterogeneous Software Deployment for RISC-V with GNU Guix
+
+The important Linux distributions, including Debian and Fedora, are capable of targeting different hardware targets, such as aarch64 and riscv64. For the heterogeneous RISC-V platform and its many variants these distributions can not provide the 'generics' required for software development and deployment leading to researchers using ad hoc package managers on top of 'whatever works' (TM).
+
+GNU Guix is different. Guix not only provides a reproducible bootstrap (with GNU Mes) from source, it is also capable of addressing different targets at the same time and makes cross-compilation a breeze.
+
+In this talk we present GNU Guix and demonstrate creating a software package that is cross compiled to riscv64 and provides a statically linked target. This target we build and deploy in a Guix container so that all dependencies have to be explicitely declared and no outside software can 'bleed in'. Next we run the built software in qemu emulation, as well as on native RISC-V hardware and gem5, the RISC-V simulator. We will also explain how the bootstrap from source works and how we can address heterogeneous hardware targets, such as the manycore BlackParrot platform we are developing software for.
+
+
+
+## Original outline
+
 "Using GUIX for Packaged, Portable, and Reproducible Research in Computer
 Architecture"
 
